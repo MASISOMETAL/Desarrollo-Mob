@@ -1,52 +1,54 @@
-import { Button, Image, StyleSheet, Text, View } from "react-native";
+import { Button, Image, StyleSheet, Text, View, ScrollView } from "react-native";
 
 import Card from "../components/Card";
 import React from "react";
 
 const CategoryBreadScreen = ({ navigation }) => {
   return (
-    <View style={styles.mainContainer}>
-      <Text style={styles.tit}>Tambien tenemos... </Text>
-      <Card style={styles.containerStyle}>
-        <Text style={styles.tit2}>Pan</Text>
-        <Image
-          style={styles.tinyLogo}
-          source={require("../../assets/pan.png")}
-        />
-        <Button
-          title="QUIERO COMPRAR"
-          onPress={() => {
-            navigation.navigate("Detalle");
-          }}
-        />
-      </Card>
-      <Card style={styles.containerStyle}>
-        <Text style={styles.tit2}>Semita</Text>
-        <Image
-          style={styles.tinyLogo}
-          source={require("../../assets/semita.png")}
-        />
-        <Button
-          title="QUIERO COMPRAR"
-          onPress={() => {
-            navigation.navigate("Detalle");
-          }}
-        />
-      </Card>
-      <Card style={styles.containerStyle}>
-        <Text style={styles.tit2}>Empanadas</Text>
-        <Image
-          style={styles.tinyLogo}
-          source={require("../../assets/empanadas.png")}
-        />
-        <Button
-          title="QUIERO COMPRAR"
-          onPress={() => {
-            navigation.navigate("Detalle");
-          }}
-        />
-      </Card>
-    </View>
+    <ScrollView>
+      <View style={styles.mainContainer}>
+        <Text style={styles.tit}>Tambien tenemos... </Text>
+        <Card style={styles.containerStyle}>
+          <Text style={styles.tit2}>Pan</Text>
+          <Image
+            style={styles.tinyLogo}
+            source={require("../../assets/pan.png")}
+          />
+          <Button
+            title="QUIERO COMPRAR"
+            onPress={() => {
+              navigation.navigate("Detalle");
+            }}
+          />
+        </Card>
+        <Card style={styles.containerStyle}>
+          <Text style={styles.tit2}>Semita</Text>
+          <Image
+            style={styles.tinyLogo}
+            source={require("../../assets/semita.png")}
+          />
+          <Button
+            title="QUIERO COMPRAR"
+            onPress={() => {
+              navigation.navigate("Detalle");
+            }}
+          />
+        </Card>
+        <Card style={styles.containerStyle}>
+          <Text style={styles.tit2}>Empanadas</Text>
+          <Image
+            style={styles.tinyLogo}
+            source={require("../../assets/empanadas.png")}
+          />
+          <Button
+            title="QUIERO COMPRAR"
+            onPress={() => {
+              navigation.navigate("Detalle");
+            }}
+          />
+        </Card>
+      </View>
+    </ScrollView>
   );
 };
 
@@ -55,7 +57,7 @@ export default CategoryBreadScreen;
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
-    flexWrap: "wrap",
+    //flexWrap: "wrap",
     justifyContent: "center",
     alignContent: "center",
     alignItems: "center",
